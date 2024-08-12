@@ -2,7 +2,8 @@
 
 Find Sub Domains FAST. Inspired by DirBuster
 
-![subseekr](https://github.com/user-attachments/assets/d11df946-197f-4493-8e5e-a141784c46b4)
+![subseekr](https://github.com/user-attachments/assets/1e301ca9-b5f3-4b92-a7a1-6d34d076b94b)
+
 
 
 ## Docker
