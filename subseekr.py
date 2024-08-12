@@ -3,9 +3,8 @@ from colorama import Fore, Style, init
 import time
 import sys
 from fake_useragent import UserAgent
+import socket
 import concurrent.futures
-
-init(autoreset=True)
 
 init(autoreset=True)
 
@@ -19,7 +18,6 @@ APIKEY='''
 print(APIKEY)
 
 
-ua = UserAgent()
 
 ua = UserAgent()
 
@@ -36,7 +34,8 @@ def check_single_subdomain(sub, domain):
     try:
         response = requests.get(url, headers=headers, timeout=3)
         if response.status_code == 200:
-            print(f"\n{Fore.GREEN}[ONLINE]{Style.RESET_ALL} {url}")
+            ip_address = socket.gethostbyname(f"{sub}.{domain}")
+            print(f"\n{Fore.GREEN}[ONLINE]{Style.RESET_ALL} {ip_address} | {url}")
             return url
     except requests.RequestException:
         pass
