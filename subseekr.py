@@ -80,10 +80,6 @@ def main():
             if repeat.lower() != 'y':
                 break
         except KeyboardInterrupt:
-            print(f"\n{Fore.CYAN}Press Ctrl-C again to exit, or wait to return to the main menu...{Style.RESET_ALL}")
-            try:
-                time.sleep(3)
-            except KeyboardInterrupt:
             print(f"\n{Fore.RED}Exiting...{Style.RESET_ALL}")
             break
 
