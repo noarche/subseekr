@@ -29,7 +29,13 @@ Find Sub Domains FAST. Inspired by DirBuster
 
 **Litecoin** address `ltc1qu7ze2hlnkh440k37nrm4nhpv2dre7fl8xu0egx`
 
+## Known Bugs
 
+    Not saving logs correctly
+
+## Planned Updates
+
+    Port scan options for online host.
 
 -------------------------------------------------------------------
 
