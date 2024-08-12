@@ -35,7 +35,7 @@ def check_single_subdomain(sub, domain):
         response = requests.get(url, headers=headers, timeout=3)
         if response.status_code == 200:
             ip_address = socket.gethostbyname(f"{sub}.{domain}")
-            print(f"\n{Fore.GREEN}[ONLINE]{Style.RESET_ALL} {Fore.YELLOW}{ip_address}{Style.RESET_ALL} | {Fore.BLUE}{url}{Style.RESET_ALL}")
+            print(f"\n{Fore.GREEN}[ONLINE]{Style.RESET_ALL} {Fore.YELLOW}{ip_address}{Style.RESET_ALL} | {Fore.RED}{url}{Style.RESET_ALL}")
             return url
     except requests.RequestException:
         pass
