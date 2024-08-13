@@ -4,7 +4,11 @@ Find Sub Domains FAST. Inspired by DirBuster
 
 ![subseekr](https://github.com/user-attachments/assets/1e301ca9-b5f3-4b92-a7a1-6d34d076b94b)
 
+## Updates
 
+added option to scan ports of discovered host. 
+
+fixed bug, now saves log correctly to output txt file.
 
 ## Docker
 
