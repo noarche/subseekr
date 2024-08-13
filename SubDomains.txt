@@ -2832,13 +2832,6 @@
 9rpvh
 9v82a
 9www
-All gists
-Code
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT
-Forks 6
-Revisions 3
-SOFTWARE
-Stars 17
 _aix._tcp
 _cmp._tcp
 _crl._tcp
@@ -13743,7 +13736,7 @@ copidrogas
 copier
 copier1
 copier2
-copies or substantial portions of the Software
+copiesorsubstantialportionsoftheSoftware
 copland
 copod3
 copper
