@@ -46,7 +46,7 @@ def check_single_subdomain(sub, domain, ports, online_links):
             ports_str = f" | Open Ports: {open_ports}" if open_ports else ""
             output_line = f"\n{Fore.GREEN}[ONLINE]{Style.RESET_ALL} {Fore.YELLOW}{ip_address}{Style.RESET_ALL} | {Fore.RED}{url}{Style.RESET_ALL}{ports_str}"
             print(output_line)
-            online_links.append(f"{Fore.YELLOW}{ip_address}{Style.RESET_ALL} | {Fore.RED}{url}{Style.RESET_ALL} | {Fore.CYAN}{open_ports}{Style.RESET_ALL}")
+            online_links.append(f"{ip_address} | {url} | {open_ports}")
     except requests.RequestException:
         pass
 
