@@ -1,3 +1,28 @@
+# Disclaimer:
+# This code/script/application/program is solely for educational and learning purposes.
+# All information, datasets, images, code, and materials are presented in good faith and
+# intended for instructive use. However, noarche make no representation or warranty, 
+# express or implied, regarding the accuracy, adequacy, validity, reliability, availability,
+# or completeness of any data or associated materials.
+# Under no circumstance shall noarche have any liability to you for any loss, damage, or 
+# misinterpretation arising due to the use of or reliance on the provided data. Your utilization
+# of the code and your interpretations thereof are undertaken at your own discretion and risk.
+#
+# By executing script/code/application, the user acknowledges and agrees that they have read, 
+# understood, and accepted the terms and conditions (or any other relevant documentation or 
+#policy) as provided by noarche.
+#
+#Visit https://github.com/noarche for more information. 
+#
+#  _.··._.·°°°·.°·..·°¯°·._.··._.·°¯°·.·° .·°°°°·.·°·._.··._
+# ███╗   ██╗ ██████╗  █████╗ ██████╗  ██████╗██╗  ██╗███████╗
+# ████╗  ██║██╔═══██╗██╔══██╗██╔══██╗██╔════╝██║  ██║██╔════╝
+# ██╔██╗ ██║██║   ██║███████║██████╔╝██║     ███████║█████╗  
+# ██║╚██╗██║██║   ██║██╔══██║██╔══██╗██║     ██╔══██║██╔══╝  
+# ██║ ╚████║╚██████╔╝██║  ██║██║  ██║╚██████╗██║  ██║███████╗
+# ╚═╝  ╚═══╝ ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝ ╚═════╝╚═╝  ╚═╝╚══════╝
+# °°°·._.··._.·°°°·.°·..·°¯°··°¯°·.·°.·°°°°·.·°·._.··._.·°°°
+
 import requests
 from colorama import Fore, Style, init
 import time
@@ -46,7 +71,7 @@ def check_single_subdomain(sub, domain, ports, online_links):
             ports_str = f" | Open Ports: {open_ports}" if open_ports else ""
             output_line = f"\n{Fore.GREEN}[ONLINE]{Style.RESET_ALL} {Fore.YELLOW}{ip_address}{Style.RESET_ALL} | {Fore.RED}{url}{Style.RESET_ALL}{ports_str}"
             print(output_line)
-            online_links.append(f"{ip_address} | {url} | {open_ports}")
+            online_links.append(f"{ip_address},{url},{open_ports}")
     except requests.RequestException:
         pass
 
@@ -59,7 +84,7 @@ def check_subdomains(domain, threads, ports, online_links):
     with concurrent.futures.ThreadPoolExecutor(max_workers=threads) as executor:
         future_to_subdomain = {executor.submit(check_single_subdomain, sub, domain, ports, online_links): sub for sub in subdomains}
         for index, future in enumerate(concurrent.futures.as_completed(future_to_subdomain), start=1):
-            future.result()  # We're not returning anything from check_single_subdomain anymore
+            future.result() 
             print_progress_bar(index, total_subdomains)
 
     if online_links:
@@ -104,3 +129,29 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+
+# Disclaimer:
+# This code/script/application/program is solely for educational and learning purposes.
+# All information, datasets, images, code, and materials are presented in good faith and
+# intended for instructive use. However, noarche make no representation or warranty, 
+# express or implied, regarding the accuracy, adequacy, validity, reliability, availability,
+# or completeness of any data or associated materials.
+# Under no circumstance shall noarche have any liability to you for any loss, damage, or 
+# misinterpretation arising due to the use of or reliance on the provided data. Your utilization
+# of the code and your interpretations thereof are undertaken at your own discretion and risk.
+#
+# By executing script/code/application, the user acknowledges and agrees that they have read, 
+# understood, and accepted the terms and conditions (or any other relevant documentation or 
+#policy) as provided by noarche.
+#
+#Visit https://github.com/noarche for more information. 
+#
+#  _.··._.·°°°·.°·..·°¯°·._.··._.·°¯°·.·° .·°°°°·.·°·._.··._
+# ███╗   ██╗ ██████╗  █████╗ ██████╗  ██████╗██╗  ██╗███████╗
+# ████╗  ██║██╔═══██╗██╔══██╗██╔══██╗██╔════╝██║  ██║██╔════╝
+# ██╔██╗ ██║██║   ██║███████║██████╔╝██║     ███████║█████╗  
+# ██║╚██╗██║██║   ██║██╔══██║██╔══██╗██║     ██╔══██║██╔══╝  
+# ██║ ╚████║╚██████╔╝██║  ██║██║  ██║╚██████╗██║  ██║███████╗
+# ╚═╝  ╚═══╝ ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝ ╚═════╝╚═╝  ╚═╝╚══════╝
+# °°°·._.··._.·°°°·.°·..·°¯°··°¯°·.·°.·°°°°·.·°·._.··._.·°°°
