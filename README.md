@@ -1,3 +1,7 @@
+# ATTENTION:
+
+Please update to [subseekr2](https://github.com/noarche/subseekr2) written in golang for much faster performance. 
+
 # subseekr
 
 Find Sub Domains FAST. Inspired by DirBuster
